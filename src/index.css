@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f7faf5;
+    color: #2d3748;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Fredoka', 'Prompt', sans-serif;
+}
+
+@keyframes gentle-sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2.5deg); }
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes butterfly-flutter {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scaleX(1); }
+  25% { transform: translateY(-10px) rotate(5deg) scaleX(0.7); }
+  50% { transform: translateY(-4px) rotate(-3deg) scaleX(1); }
+  75% { transform: translateY(-12px) rotate(4deg) scaleX(0.7); }
+}
+
+.animate-sway {
+  animation: gentle-sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-float {
+  animation: gentle-float 3.5s ease-in-out infinite;
+}
+
+.animate-flutter {
+  animation: butterfly-flutter 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar for soothing UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 222, 128, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.6);
+}
